@@ -1,4 +1,3 @@
-# rubocop:disable Style/StringLiterals
 tap "homebrew/bundle"
 tap "homebrew/cask-fonts"
 tap "planetscale/tap"
@@ -24,6 +23,7 @@ brew "mysql"
 brew "neofetch"
 brew "neovim"
 brew "pgweb"
+brew "pinentry-mac"
 brew "pnpm"
 brew "pocketbase"
 brew "ripgrep"
