@@ -1,0 +1,12 @@
+[font]
+size = 14
+
+[font.normal]
+family = "JetbrainsMono Nerd Font"
+
+[shell]
+program = "/opt/homebrew/bin/tmux"
+
+[window.padding]
+x = 32
+y = 32
