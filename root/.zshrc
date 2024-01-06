@@ -37,4 +37,4 @@ zle -N _fzf_history_search
 
 bindkey '^R' _fzf_history_search
 
-eval "$(rtx activate)"
+eval "$(mise activate)"
