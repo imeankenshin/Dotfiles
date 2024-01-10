@@ -16,11 +16,7 @@ LOGO="
 
 install-dotfiles() {
   echo "Installing dotfiles zip..."
-  curl -fsSL "https://github.com/$DOTFILES_REPO/archive/main.zip" -o "$HOME/Dotfiles.zip"
-  echo "Unzipping dotfiles..."
-  unzip -o "$HOME/Dotfiles.zip" -d "$HOME"
-  echo "Removing dotfiles zip..."
-  rm -rf "$HOME/Dotfiles.zip"
+  git clone "https://github.com/$DOTFILES_REPO.git" "$DOTFILES_PATH"
 }
 
 install-brew() {
