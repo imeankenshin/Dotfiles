@@ -23,6 +23,7 @@ zplug "marzocchi/zsh-notify"
 zplug "tcnksm/docker-alias", use:zshrc
 zplug "romkatv/powerlevel10k", as:theme
 zplug "plugins/docker-compose", from:oh-my-zsh
+zplug "plugins/docker", from:oh-my-zsh
 
 zplug load
 
@@ -34,7 +35,9 @@ alias "..."="cd ../.."
 alias "quit"="exit"
 
 zle -N _fzf_history_search
+zle -N _start_editing
 
 bindkey '^R' _fzf_history_search
+bindkey '^V' _start_editing
 
 eval "$(mise activate)"
