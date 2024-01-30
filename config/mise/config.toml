@@ -1,0 +1,5 @@
+[tools]
+python = "pypy3.10-7.3.14"
+ruby = "latest"
+java = "corretto-17.0.9.8.1"
+node = "18"
