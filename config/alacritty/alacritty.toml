@@ -8,5 +8,5 @@ family = "JetbrainsMono Nerd Font"
 program = "/opt/homebrew/bin/tmux"
 
 [window.padding]
-x = 32
-y = 32
+x = 48
+y = 48
