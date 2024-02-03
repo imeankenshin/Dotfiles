@@ -7,7 +7,7 @@ fi
 
 export PNPM_HOME="/Users/kenshin/Library/pnpm"
 export DOTFILES_PATH="$HOME/Dotfiles"
-export GPG_TTY=$(tty)
+export GPG_TTY=$TTY
 
 source "$HOME/.cache/p10k-instant-prompt-$USER.zsh"
 source "$HOME/.zplug/init.zsh"
