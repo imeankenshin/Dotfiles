@@ -4,25 +4,25 @@
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
-
+# exports
 export PNPM_HOME="/Users/kenshin/Library/pnpm"
 export DOTFILES_PATH="$HOME/Dotfiles"
 export GPG_TTY=$TTY
-
+# sources
 source "$HOME/.cache/p10k-instant-prompt-$USER.zsh"
 source "$HOME/.zplug/init.zsh"
 source "$HOME/.p10k.zsh"
-
+# scripts
 . "$DOTFILES_PATH/script/functions.zsh"
 . "$DOTFILES_PATH/script/crons.zsh"
-
+# path
 binary "$HOME/go/bin"
 binary "$HOME/.cargo/bin"
 binary "$HOME/Library/pnpm"
 binary "$HOME/.local/bin"
 binary "/opt/homebrew/bin"
 binary "/opt/homebrew/sbin"
-
+# zplug
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-syntax-highlighting"
 zplug "zsh-users/zsh-completions"
@@ -34,11 +34,16 @@ zplug "plugins/docker", from:oh-my-zsh
 
 zplug load
 
+# aliases
+# shorter commands
 alias "lg"="lazygit"
+# directories
 alias "~"="cd ~"
 alias "/"="cd /"
 alias ".."="cd .."
 alias "..."="cd ../.."
+alias "godf"="cd $DOTFILES_PATH"
+# other
 alias "quit"="exit"
 
 zle -N _fzf_history_search
