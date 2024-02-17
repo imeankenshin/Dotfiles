@@ -3,12 +3,9 @@ export PNPM_HOME="/Users/kenshin/Library/pnpm"
 export DOTFILES_PATH="$HOME/Dotfiles"
 export GPG_TTY=$TTY
 # sources
-source "$HOME/.cache/p10k-instant-prompt-$USER.zsh"
 source "$HOME/.zplug/init.zsh"
-source "$HOME/.p10k.zsh"
-# scripts
-. "$DOTFILES_PATH/script/functions.zsh"
-. "$DOTFILES_PATH/script/crons.zsh"
+source "$DOTFILES_PATH/script/functions.zsh"
+source "$DOTFILES_PATH/script/crons.zsh"
 # path
 binary "$HOME/go/bin"
 binary "$HOME/.cargo/bin"
