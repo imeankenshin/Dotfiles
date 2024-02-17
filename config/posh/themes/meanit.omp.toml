@@ -1,0 +1,53 @@
+"$schema" = "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json"
+version = 2
+
+[[blocks]]
+alignment = "left"
+type = "prompt"
+
+[[blocks.segments]]
+foreground = "#CECE04"
+style = "plain"
+template = "# "
+type = "root"
+
+[[blocks.segments]]
+style = "plain"
+template = "{{ .CurrentDate | date .Format }} "
+type = "time"
+
+[[blocks.segments]]
+foreground = "lightGreen"
+style = "plain"
+template = "{{ .Path }} "
+type = "path"
+
+[blocks.segments.properties]
+style = "agnoster_short"
+
+[[blocks.segments]]
+foreground = "white"
+style = "plain"
+template = "<blue>git</>({{ .UpstreamIcon }}{{ .HEAD }}) "
+type = "git"
+
+[blocks.segments.properties]
+branch_icon = ""
+fetch_upstream_icon = false
+
+[[blocks]]
+alignment = "left"
+type = "prompt"
+newline = true
+
+[[blocks.segments]]
+newline = true
+foreground = "blue"
+foreground_templates = ["{{ if gt .Code 0 }}#E84855{{ end }}"]
+style = "plain"
+template = "$ "
+type = "status"
+
+
+[blocks.segments.properties]
+always_enabled = true
