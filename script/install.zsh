@@ -26,11 +26,6 @@ install-brew() {
   brew bundle --file="$DOTFILES_PATH/Brewfile"
 }
 
-install-zplug() {
-  echo "Installing zplug 🧩"
-  curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
-}
-
 install-lunarvim() {
   echo "Installing LunarVim 🪐"
   LV_BRANCH='release-1.3/neovim-0.9' bash <(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/release-1.3/neovim-0.9/utils/installer/install.sh)
@@ -47,16 +42,12 @@ if [[ ! -d "$HOME/Dotfiles" ]]; then
   install-dotfiles
 else
   echo "Dotfiles already installed"
+  exit 1
 fi
 if [[ ! -d "/opt/homebrew" ]]; then
   install-brew
 else
   echo "Homebrew already installed"
-fi
-if [[ ! -d "$HOME/.zplug" ]]; then
-  install-zplug
-else
-  echo "zplug already installed"
 fi
 if [[ ! -d "$HOME/.local/share/lunarvim" ]]; then
   install-lunarvim
