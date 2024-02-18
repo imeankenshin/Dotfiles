@@ -1,4 +1,5 @@
 "$schema" = "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json"
+final_space = true
 version = 2
 
 [[blocks]]
@@ -28,7 +29,7 @@ style = "agnoster_short"
 [[blocks.segments]]
 foreground = "white"
 style = "plain"
-template = "<blue>git</>({{ .UpstreamIcon }}{{ .HEAD }}) "
+template = "<blue>git</>({{ .HEAD }})"
 type = "git"
 
 [blocks.segments.properties]
@@ -41,13 +42,14 @@ type = "prompt"
 newline = true
 
 [[blocks.segments]]
-newline = true
 foreground = "blue"
-foreground_templates = ["{{ if gt .Code 0 }}#E84855{{ end }}"]
+foreground_templates = ["{{ if gt .Code 0 }}red{{ end }}"]
 style = "plain"
+template = "$"
+type = "path"
+
+[transient_prompt]
+background = "transparent"
+foreground_templates = ["{{ if gt .Code 0 }}red{{ end }}"]
+foreground = "blue"
 template = "$ "
-type = "status"
-
-
-[blocks.segments.properties]
-always_enabled = true
