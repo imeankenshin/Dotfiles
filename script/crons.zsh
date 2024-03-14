@@ -5,7 +5,7 @@ if ! zplug check --verbose; then
 fi
 
 # A cron job to ask the user to update dotfiles repository if there are any
-if [[ -n $(git --git-dir $DOTFILES status -s) ]]; then
+if [[ -n $(git --git-dir $DOTFILES_PATH/.git fetch) ]]; then
   gum confirm "Update dotfiles repository?" && git pull
 fi
 
