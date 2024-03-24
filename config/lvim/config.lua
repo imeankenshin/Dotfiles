@@ -14,3 +14,18 @@ table.insert(lvim.plugins, {
     end, 100)
   end,
 })
+
+table.insert(lvim.plugins,   {
+    "CopilotC-Nvim/CopilotChat.nvim",
+    branch = "canary",
+    dependencies = {
+      { "zbirenbaum/copilot.lua" },
+      { "nvim-lua/plenary.nvim" },
+    },
+    opts = {
+      debug = true,
+    },
+  }
+)
+
+lvim.transparent_window = true
