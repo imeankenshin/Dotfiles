@@ -20,8 +20,10 @@ config.color_scheme = 'Tokyo Night'
 
 config.keys = {
   {key="p", mods="CMD", action=wezterm.action{SplitHorizontal={domain="CurrentPaneDomain"}}},
-  {key="o", mods="CMD", action=wezterm.action{SplitVertical={domain="CurrentPaneDomain"}}},
+  {key="i", mods="CMD", action=wezterm.action{SplitVertical={domain="CurrentPaneDomain"}}},
   {key="l", mods="CMD", action=wezterm.action{ActivatePaneDirection="Right"}},
+  {key="j", mods="CMD", action=wezterm.action{ActivatePaneDirection="Down"}},
+  {key="k", mods="CMD", action=wezterm.action{ActivatePaneDirection="Up"}},
   {key="h", mods="CMD", action=wezterm.action{ActivatePaneDirection="Left"}},
 }
 

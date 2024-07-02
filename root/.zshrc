@@ -35,7 +35,6 @@ alias ".."="cd .."
 alias "..."="cd ../.."
 alias "godf"="cd $DOTFILES_PATH"
 # synonyms
-alias "code"="zed"
 alias "quit"="exit"
 
 zle -N _fzf_history_search
