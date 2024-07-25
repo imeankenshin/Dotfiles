@@ -26,15 +26,8 @@ zplug "plugins/docker", from:oh-my-zsh
 zplug load
 
 # aliases
-# shorter commands
 alias "lg"="lazygit"
-# directories
-alias "~"="cd ~"
-alias "/"="cd /"
-alias ".."="cd .."
-alias "..."="cd ../.."
-alias "godf"="cd $DOTFILES_PATH"
-# synonyms
+alias "st"="speedtest"
 alias "quit"="exit"
 
 zle -N _fzf_history_search
